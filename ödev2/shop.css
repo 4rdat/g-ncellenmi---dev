@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: bisque;
+    min-height: 800px;
+    border: 8px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: first baseline;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+
+
+
+.box{
+    margin: 250px;
+    height: 350px;
+    margin: 15px;
+    width: 200px;
+    background-color: rgb(45, 30, 12);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 40pt;
+    display: flex;
+    flex-direction:  column;
+    align-items: center;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+
+.box img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+
+.fiyat {
+    font-size: 20px;
+    color: #e74c3c; 
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.urun-isimi{
+    font-size: 12px;
+    color: #3498db;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+
+
+
+}
+
+
+
+.button{
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease
+  }
+
+
+  button:hover {
+    background-color: #2980b9;
+}
+
+
+@media (max-width: 768px) {
+    .box {
+        width: 200px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .box {
+        width: 150px;
+        height: 250px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+
+
+.product-details {
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 80%;
+    max-width: 500px;
+    background-color: white; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000; 
+    text-align: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; 
+}
+
+.product-details.show {
+    display: block;
+    opacity: 1; 
+    transform: translate(-50%, -50%) scale(1.1); 
+}
+
+.product-details img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-details p {
+    font-size: 14px;
+    color: #333;
+}
+
+
+
